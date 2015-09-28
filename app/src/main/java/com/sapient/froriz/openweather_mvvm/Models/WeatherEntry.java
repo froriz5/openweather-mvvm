@@ -3,6 +3,8 @@ package com.sapient.froriz.openweather_mvvm.Models;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
+import com.sapient.froriz.openweather_mvvm.BR;
+
 import java.util.Observable;
 
 /**
@@ -30,6 +32,12 @@ public class WeatherEntry extends BaseObservable{
         this.low = low;
         this.high = high;
         this.description = description;
+
+        notifyPropertyChanged(BR.location);
+        notifyPropertyChanged(BR.currentTemp);
+        notifyPropertyChanged(BR.low);
+        notifyPropertyChanged(BR.high);
+        notifyPropertyChanged(BR.description);
     }
 
     @Bindable
