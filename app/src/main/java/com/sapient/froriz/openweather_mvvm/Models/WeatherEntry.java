@@ -1,6 +1,7 @@
 package com.sapient.froriz.openweather_mvvm.Models;
 
 import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 
 import java.util.Observable;
 
@@ -29,6 +30,31 @@ public class WeatherEntry extends BaseObservable{
         this.low = low;
         this.high = high;
         this.description = description;
+    }
+
+    @Bindable
+    public String getLocation() {
+        return location;
+    }
+
+    @Bindable
+    public double getCurrentTemp() {
+        return currentTemp;
+    }
+
+    @Bindable
+    public double getLow() {
+        return low;
+    }
+
+    @Bindable
+    public double getHigh() {
+        return high;
+    }
+
+    @Bindable
+    public String getDescription() {
+        return description;
     }
 
     @Override
